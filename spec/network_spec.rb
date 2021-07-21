@@ -39,6 +39,9 @@ RSpec.describe Network do
     knight_rider = Show.new("Knight Rider", "Glen Larson", [michael_knight, kitt])
     nbc = Network.new("NBC")
 
-    expect(nbc.main_characters).to eq()
+    nbc.add_show(knight_rider)
+    nbc.add_show(parks_and_rec)
+    
+    expect(nbc.main_characters).to eq([kitt])
   end
 end
